@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XXXX</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #6F44BE;
+        }
+
+        div.casa > img.trofeu {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-left: 3%;
+        }
+
+        div.casa {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        div.casa > p.desafios {
+            color: #2A105A;
+            font-size: 55px;
+            margin-right: 5%;
+            margin-top: 40px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+
+        div.jogos {
+            background-color: #2a105ad4;
+            margin-top: 15px;
+            margin-left: 15px;
+            margin-right: 10px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-radius: 50px;
+            flex-wrap: wrap;
+            align-items: center;
+            transition: 1s;
+        }
+
+        div.jogos:hover {
+            transition: 1s;
+            border: 2px solid rgb(0, 225, 255);
+            box-shadow: 0px 5px 15px;
+        }
+        
+
+        div.jogos > a {
+            display: inline;
+            margin-left: 40px;
+        }
+
+        div.jogos > a > img {
+            width: 280px;
+            height: 160px;
+            border-radius: 20px;
+            margin-top: 10px;
+            transition: 0.5;
+        }
+
+        div.jogos > a > img:hover {
+            margin: 1px;
+            transition: 0.5s;
+            /* border: 3px solid rgb(0, 225, 255); */
+            border: 3px solid rgb(0, 225, 120);
+            box-shadow: 0px 5px 15px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <audio src="som/trilha_sonora.mpeg" autoplay loop ></audio>
+    <div class="casa">
+        <img class="trofeu" src="imagens/trofeu.jpeg" alt="">
+        <p class="desafios">Desafios</p>
+    </div>
+
+    <div class="jogos">
+        <a href="mapa-do-maroto.html"><img src="imagens/mapa_do_maroto.jpeg" alt=""></a>
+        <a href=""><img src="imagens/os-livros-darmione.png" alt=""></a>
+        <a href=""><img src="imagens/torneio-tri-bruxo.png" alt=""></a>
+        <a href=""><img src="imagens/quadribol.png" alt=""></a>
+        <a href=""><img src="imagens/x1.png" alt=""></a>
+        <a href=""><img src="imagens/ordem-da-fenix.png" alt=""></a>
+    </div>
+</body>
+</html>
