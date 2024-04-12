@@ -1,13 +1,20 @@
 from flask import Flask, request, render_template, jsonify, redirect
 app = Flask(__name__)
 
-@app.route('/acesso', methods=['POST'])
-def acessoaluno():
-    sala = request.form.get('sala')
-    senha = request.form.get('senha')
+# print('testeee')
+# print('testeee')
+# print('testeee')
+# print('testeee')
 
-    print(f'A sala:',{sala})
-    print(f'A senha:', {senha})
+@app.route('/formulario', methods=['POST'])
+def formulario():
+    nome = request.form.get('nome')
+    print(nome)
+    print('testeee')
+    print('testeee')
+    print('testeee')
+    print('testeee')
 
-    return redirect('/desafios')
 
+if __name__ == '__main__':
+    app.run(debug=True)

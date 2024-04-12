@@ -37,10 +37,9 @@
     </style>
 </head>
 <body>
-    <!-- <audio src="som/trilha_sonora.mpeg" autoplay loop></audio> -->
     <div class="content">
         <span class="login" >Login</span>
-        <form action="/acesso" method="post">
+        <form action="/formulario" method="post">
             <label 
             style="color: white;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" for="sala">Sala/Adm</label>
@@ -52,9 +51,8 @@
             height: 25px;
             border-radius: 40px;
             background-color: rgba(0, 0, 0, 0.359);
-            color: white;" name="sala" id="sala">
-                <!-- <option value="vazio"></option> -->
-                <option value="adm">administrador</option>
+            color: white;" name="Sala" id="sala">
+                <option value="dono">administrador</option>
                 <option value="1°aadm">1°A ADM</option>
                 <option value="1°badm">1°B ADM</option>
                 <option value="1°ads">1°A DS</option>
@@ -70,6 +68,8 @@
                 <option value="3°ads">3°A DS</option>
                 <option value="3°bds">3°B DS</option>
             </select>
+            <label style="color: white;" for="nome">Nome</label>
+            <input type="text" name="nome" id="">
             <br>
             <br>
 
