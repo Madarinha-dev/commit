@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel</title>
+</head>
+<style>
+
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    body {
+        /* background-color:#2A105A; */
+        background-image: url(imagens/fundo03.jpeg);
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    h1 {
+        color: white;
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    h2 {
+        color: white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .casa {
+        /* background-color: #6f44be89; */
+        /* background-color: rgba(0, 26, 255, 0.33); */
+        border-color: white;
+        /* padding: 20px; */
+        padding-top: 20px;
+        /* padding-right: 10px; */
+        position: absolute;
+        padding-left: 20px;
+        padding-bottom: 20px;
+        max-width: 400px;
+        width: 70dvw;
+        margin: 15px;
+        border-radius: 40px;
+        margin-top:11dvh;
+    }
+
+    .corpo > form > label {
+        color: white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .corpo > form > input {
+        border-radius: 30px;
+        width: 160px;
+    }
+
+    #sala > option {
+        /* background-color: #5a17d6; */
+        background-color: rgba(255, 255, 255, 0.476);
+    }
+</style>
+<body>
+    <h1>Sala de Controle</h1>
+    <!-- <h2>Pontuação</h2> -->
+    <!-- <h2>Definir senha de sala</h2> -->
+    <div class="casa">
+        <div class="corpo">
+            <h2>Definir senha da sala</h2>
+            <form action="">
+                <label for="sala_senha">Sala:</label>
+                <br>
+                <select style="
+                border-radius: 40px;
+                width: 63dvw;
+                height: 25px;
+                max-width: 350px;
+                background-color: rgba(255, 255, 255, 0.476);
+                " name="sala" id="sala">
+                    <option value="1aadm">1°A ADM</option>
+                    <option value="1badm">1°B ADM</option>
+                    <option value="1ads">1°A DS</option>
+                    <option value="1bds">1°B DS</option>
+
+                    <option value="2aadm">2°A ADM</option>
+                    <option value="2badm">2°B ADM</option>
+                    <option value="2ads">2°A DS</option>
+                    <option value="2bds">2°B DS</option>
+
+                    <option value="3aadm">3°A ADM</option>
+                    <option value="3badm">3°B ADM</option>
+                    <option value="3ads">3°A DS</option>
+                    <option value="3bds">3°B DS</option>
+                </select>
+                <br>
+                <br>
+
+                <label for="nova_senha">Nova Senha:</label><br>
+                <input style="
+                width: 63dvw;
+                max-width: 350px;
+                height: 25px;
+                border-radius: 40px;
+                /* background-color: #2a105abb; */
+                background-color: rgba(255, 255, 255, 0.476);
+                color: white;" type="password" name="nova_senha" id="nova_senha">
+                <br><br>
+                <button style="
+                width: 63dvw;
+                max-width: 350px;
+                border-radius: 40px;
+                height: 25px;" type="reset">Limpar</button><br>
+
+                <button style="
+                width: 63dvw;
+                max-width: 350px;
+                border-radius: 40px;
+                height: 25px;" type="submit">Confirmar</button>
+            </form>
+        </div>
+        <br>
+
+
+
+
+        <hr>
+
+
+
+
+        <br>
+        <div class="corpo">
+            <h2>Pontuação</h2>
+            <form action="">
+                <label for="pontuacao">Sala:</label>
+                <br>
+                <select style="
+                border-radius: 40px;
+                width: 63dvw;
+                height: 25px;
+                max-width: 350px;
+                /* background-color: #2a105abb;*/
+                background-color: rgba(255, 255, 255, 0.476);" name="sala" id="sala">
+                    <option value="1aadm">1°A ADM</option>
+                    <option value="1badm">1°B ADM</option>
+                    <option value="1ads">1°A DS</option>
+                    <option value="1bds">1°B DS</option>
+
+                    <option value="2aadm">2°A ADM</option>
+                    <option value="2badm">2°B ADM</option>
+                    <option value="2ads">2°A DS</option>
+                    <option value="2bds">2°B DS</option>
+
+                    <option value="3aadm">3°A ADM</option>
+                    <option value="3badm">3°B ADM</option>
+                    <option value="3ads">3°A DS</option>
+                    <option value="3bds">3°B DS</option>
+                </select>
+                <br>
+                <br>
+                <label for="evento_01">EVENTO 01:</label><br>
+                <input style="
+                width: 63dvw;
+                max-width: 350px;
+                height: 25px;
+                border-radius: 40px;
+                /* background-color: #2a105abb; */
+                background-color: rgba(255, 255, 255, 0.476);
+                color: white;" type="text" name="evento_01" id="evento_01">
+                <br><br>
+
+                <label for="evento_02">EVENTO 02:</label><br>
+                <input style="
+                width: 63dvw;
+                max-width: 350px;
+                height: 25px;
+                border-radius: 40px;
+                /* background-color: #2a105abb; */
+                background-color: rgba(255, 255, 255, 0.476);
+                color: white;" type="text" name="evento_02" id="evento_02">
+                <br><br>
+
+                <label for="evento_03">EVENTO 03:</label><br>
+                <input style="
+                width: 63dvw;
+                max-width: 350px;
+                height: 25px;
+                border-radius: 40px;
+                /* background-color: #2a105abb; */
+                background-color: rgba(255, 255, 255, 0.476);
+                color: white;" type="text" name="evento_03" id="evento_03">
+                <br><br>
+
+                <label for="evento_04">EVENTO 04:</label><br>
+                <input style="
+                width: 63dvw;
+                max-width: 350px;
+                height: 25px;
+                border-radius: 40px;
+                /* background-color: #2a105abb; */
+                background-color: rgba(255, 255, 255, 0.476);
+                color: white;" type="text" name="evento_04" id="evento_04">
+                <br><br>
+
+                <label for="evento_05">EVENTO 05:</label><br>
+                <input style="
+                width: 63dvw;
+                max-width: 350px;
+                height: 25px;
+                border-radius: 40px;
+                /* background-color: #2a105abb; */
+                background-color: rgba(255, 255, 255, 0.476);
+                color: white;" type="text" name="evento_05" id="evento_05">
+                <br><br>
+
+                <label for="evento_06">EVENTO 06:</label><br>
+                <input style="
+                width: 63dvw;
+                max-width: 350px;
+                height: 25px;
+                border-radius: 40px;
+                /* background-color: #2a105abb; */
+                background-color: rgba(255, 255, 255, 0.476);
+                color: white;" type="text" name="evento_06" id="evento_06">
+                <br><br>
+
+
+                <button style="
+                width: 63dvw;
+                max-width: 350px;
+                border-radius: 40px;
+                height: 25px;" type="reset">Limpar</button><br>
+
+                <button style="
+                width: 63dvw;
+                max-width: 350px;
+                border-radius: 40px;
+                height: 25px;" type="submit">Confirmar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
