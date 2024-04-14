@@ -39,7 +39,7 @@
 <body>
     <div class="content">
         <span class="login" >Login</span>
-        <form action="#">
+        <form action="#" id="meuform">
             <label 
             style="color: white;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" for="sala">Sala/Adm</label>
@@ -51,22 +51,21 @@
             height: 25px;
             border-radius: 40px;
             background-color: rgba(0, 0, 0, 0.359);
-            color: white;" name="sala" id="sala">
+            color: white;" name="sala" id="salaa">
                 <option value="dono">administrador</option>
-                <option value="1°aadm">1°A ADM</option>
-                <option value="1°badm">1°B ADM</option>
-                <option value="1°ads">1°A DS</option>
-                <option value="1°bds">1°B DS</option>
-
-                <option value="2°aadm">2°A ADM</option>
-                <option value="2°badm">2°B ADM</option>
-                <option value="2°ads">2°A DS</option>
-                <option value="2°bds">2°B DS</option>
-
-                <option value="3°aadm">3°A ADM</option>
-                <option value="3°badm">3°B ADM</option>
-                <option value="3°ads">3°A DS</option>
-                <option value="3°bds">3°B DS</option>
+                <option value="1aadm">1°A ADM</option>
+                <option value="1badm">1°B ADM</option>
+                <option value="1ads">1°A DS</option>
+                <option value="1bds">1°B DS</option>
+                <option value="2aadm">2°A ADM</option>
+                <option value="2badm">2°B ADM</option>
+                <option value="2ads">2°A DS</option>
+                <option value="2bds">2°B DS</option>
+                <option value="3aadm">3°A ADM</option>
+                <option value="3badm">3°B ADM</option>
+                <option value="3ads">3°A DS</option>
+                <option value="3bds">3°B DS</option>
+                <!-- <option value="dono">administrador</option> -->
             </select>
             <br>
             <br>
@@ -98,5 +97,119 @@
             border-radius: 40px;" type="reset">Limpar</button>
         </form>
     </div>
+
+    <script>
+        const formulario = document.getElementById('meuform');
+
+        formulario.addEventListener('submit', function(event) {
+            const sala = document.getElementById('salaa').value;
+            const senha = document.getElementById('senha').value;
+
+            if (sala === "dono") {
+                if (senha === "fhellype") {
+                    window.location.href = 'administrador.html';
+                    alert("Acesso liberado")
+                    return;
+                }        
+            }
+
+            if (sala === "1aadm") {
+                if (senha === "1aadm") {
+                    window.location.href = "desafios.html";
+                    alert("Acesso liberado");
+                    return;
+                }
+            }
+
+            if (sala === "1badm") {
+                if (senha === "1badm") {
+                    window.location.href = "desafios.html";
+                    alert("Acesso liberado");
+                    return;
+                }
+            }
+
+            if (sala === "1ads") {
+                if (senha === "1ads") {
+                    window.location.href = "desafios.html";
+                    alert("Acesso liberado");
+                    return;
+                }
+            }
+
+            if (sala === "1bds") {
+                if (senha === "1bds") {
+                    window.location.href = "desafios.html";
+                    alert("Acesso liberado");
+                    return;
+                }
+            }
+
+            if (sala === "2aadm") {
+                if (senha === "2aadm") {
+                    window.location.href = "desafios.html";
+                    alert("Acesso liberado");
+                    return;
+                }
+            }
+
+            if (sala === "2badm") {
+                if (senha === "2badm") {
+                    window.location.href = "desafios.html";
+                    alert("Acesso liberado");
+                    return;
+                }
+            }
+
+            if (sala === "2ads") {
+                if (senha === "2ads") {
+                    window.location.href = "desafios.html";
+                    alert("Acesso liberado");
+                    return;
+                }
+            }
+
+            if (sala === "2bds") {
+                if (senha === "2bds") {
+                    window.location.href = "desafios.html";
+                    alert("Acesso liberado");
+                    return;
+                }
+            }
+
+            if (sala === "3aadm") {
+                if (senha === "3aadm") {
+                    window.location.href = "desafios.html";
+                    alert("Acesso liberado");
+                    return;
+                }
+            }
+
+            if (sala === "3badm") {
+                if (senha === "3badm") {
+                    window.location.href = "desafios.html";
+                    alert("Acesso liberado");
+                    return;
+                }
+            }
+
+            if (sala === "3ads") {
+                if (senha === "3ads") {
+                    window.location.href = "desafios.html";
+                    alert("Acesso liberado");
+                    return;
+                }
+            }
+
+            if (sala === "3bds") {
+                if (senha === "3bds") {
+                    window.location.href = "desafios.html";
+                    alert("Acesso liberado");
+                    return;
+                }
+            }
+        });
+    </script>
+
 </body>
 </html>
