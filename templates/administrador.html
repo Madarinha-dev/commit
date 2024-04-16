@@ -12,8 +12,10 @@
         padding: 0px;
     }
     body {
-        /* background-image: url(imagens/fundo03.jpeg); */
-        background-image: url(imagens/fundo05.jpeg);
+        /* background-image: url(/static/img/imagens/fundo03.jpeg);  */
+        background-image: url(/static/img/imagens/fundo\ 05.jpeg);
+        /* background-image: url(imagens/fundo\ 05.jpeg); */
+        /* background-color: red; */
         padding: 10px;
         display: flex;
         justify-content: center;
@@ -66,7 +68,8 @@
     <div class="casa">
         <div class="corpo">
             <h2>Definir senha da sala</h2>
-            <form action="" id="">
+
+            <form action="" id="" method="post">
                 <label for="sala_senha">Sala:</label>
                 <br>
                 <select style="
@@ -130,7 +133,7 @@
         <br>
         <div class="corpo">
             <h2>Pontuação</h2>
-            <form action="" id="">
+            <form action="processamento" id="" method="post" >
                 <label for="pontuacao">Sala:</label>
                 <br>
                 <select style="
