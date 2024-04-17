@@ -1,9 +1,47 @@
 banco de dados para guardar os pontos de cada sala
 ex:
 
+os eventos:
+- Mapa do maroto
+- torneio tri bruxo
+- Quadribol
+- Os livros da Hermiose
+- x1 da sala precisa
+- A ordem da Fenix
+
+1- ok
+
 sala   | EV01 | EV02 | EV03 | EV04 
 sala01 | 100  | 250  | 300  | 500
 sala02 | 100  | 250  | 300  | 500
 sala03 | 100  | 250  | 300  | 500
 sala04 | 100  | 250  | 300  | 500
 sala05 | 100  | 250  | 300  | 500
+
+
+2- 
+Definir a senha das salas
+
+
+3- ok
+na tela [ administrador ] calcular o 
+total dos pontos de cada sala
+
+
+4- ok
+adicionar o campo [ pontuacao extra ]
+
+
+5- ok
+baixar o PDF do evento:
+<a href="meu_arquivo.pdf" download="nome_do_arquivo.pdf">Baixar PDF</a>
+
+
+Tela: [desafios.html]:
+- Layout de exibição [ front-and = 0 ]
+- mostrar os pontos nessa tela de acordo com as informações no login [ back-end ]
+
+Tela: [administrador]:
+- configurar a função de definir a senha das salas [ back-end]
+- Montar uma tela, mostrando o ranke em base no total de pontos do banco de dados [ front and back = ok ]
+

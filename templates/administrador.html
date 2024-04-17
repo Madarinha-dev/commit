@@ -12,10 +12,7 @@
         padding: 0px;
     }
     body {
-        /* background-image: url(/static/img/imagens/fundo03.jpeg);  */
         background-image: url(/static/img/imagens/fundo\ 05.jpeg);
-        /* background-image: url(imagens/fundo\ 05.jpeg); */
-        /* background-color: red; */
         padding: 10px;
         display: flex;
         justify-content: center;
@@ -61,10 +58,33 @@
         background-color: rgba(255, 255, 255, 0.476);
     }
 
+    .botao {
+        transition: 0.6s;
+    }
+
+    .botao:hover {
+        background-color: rgb(255, 86, 86);
+        color: white;
+        transition: 0.6s;
+        /* padding: 2px; */
+        padding-top:5px ;
+        padding-bottom: 5px;
+        margin: 5px;
+    }
 
 </style>
 <body>
     <h1>Sala de Controle</h1>
+
+    <a href="login" class=""><button style="
+        width: 57px;
+        max-width: 350px;
+        border-radius: 10px;
+        height: 25px;
+        position: absolute;
+        top: 15px;
+        left: 8px;" type="" class="botao">Voltar</button></a>
+
     <div class="casa">
         <div class="corpo">
             <h2>Definir senha da sala</h2>
@@ -111,13 +131,13 @@
                 width: 63dvw;
                 max-width: 350px;
                 border-radius: 40px;
-                height: 25px;" type="reset">Limpar</button><br>
+                height: 25px;" type="reset" class="botao" >Limpar</button><br>
 
                 <button style="
                 width: 63dvw;
                 max-width: 350px;
                 border-radius: 40px;
-                height: 25px;" type="submit">Confirmar</button>
+                height: 25px;" type="submit" class="botao" >Confirmar</button>
             </form>
         </div>
         <br>
@@ -160,7 +180,7 @@
                 </select>
                 <br>
                 <br>
-                <label for="evento_01">EVENTO 01:</label><br>
+                <label for="evento_01">MAPA DO MAROTO:</label><br>
                 <input style="
                 width: 63dvw;
                 max-width: 350px;
@@ -168,10 +188,10 @@
                 border-radius: 40px;
                 /* background-color: #2a105abb; */
                 background-color: rgba(255, 255, 255, 0.476);
-                color: white;" type="text" name="evento_01" id="evento_01">
+                color: white;" type="number" name="evento_01" id="evento_01">
                 <br><br>
 
-                <label for="evento_02">EVENTO 02:</label><br>
+                <label for="evento_02">TORNEIO TRI BRUXO:</label><br>
                 <input style="
                 width: 63dvw;
                 max-width: 350px;
@@ -179,10 +199,10 @@
                 border-radius: 40px;
                 /* background-color: #2a105abb; */
                 background-color: rgba(255, 255, 255, 0.476);
-                color: white;" type="text" name="evento_02" id="evento_02">
+                color: white;" type="number" name="evento_02" id="evento_02">
                 <br><br>
 
-                <label for="evento_03">EVENTO 03:</label><br>
+                <label for="evento_03">QUADRIBOL:</label><br>
                 <input style="
                 width: 63dvw;
                 max-width: 350px;
@@ -190,10 +210,10 @@
                 border-radius: 40px;
                 /* background-color: #2a105abb; */
                 background-color: rgba(255, 255, 255, 0.476);
-                color: white;" type="text" name="evento_03" id="evento_03">
+                color: white;" type="number" name="evento_03" id="evento_03">
                 <br><br>
 
-                <label for="evento_04">EVENTO 04:</label><br>
+                <label for="evento_04">OS LIVROS DA HERMIOSE:</label><br>
                 <input style="
                 width: 63dvw;
                 max-width: 350px;
@@ -201,10 +221,10 @@
                 border-radius: 40px;
                 /* background-color: #2a105abb; */
                 background-color: rgba(255, 255, 255, 0.476);
-                color: white;" type="text" name="evento_04" id="evento_04">
+                color: white;" type="number" name="evento_04" id="evento_04">
                 <br><br>
 
-                <label for="evento_05">EVENTO 05:</label><br>
+                <label for="evento_05">X1 DA SALA PRECISA:</label><br>
                 <input style="
                 width: 63dvw;
                 max-width: 350px;
@@ -212,10 +232,10 @@
                 border-radius: 40px;
                 /* background-color: #2a105abb; */
                 background-color: rgba(255, 255, 255, 0.476);
-                color: white;" type="text" name="evento_05" id="evento_05">
+                color: white;" type="number" name="evento_05" id="evento_05">
                 <br><br>
 
-                <label for="evento_06">EVENTO 06:</label><br>
+                <label for="evento_06">A ORDEM DA FENIX:</label><br>
                 <input style="
                 width: 63dvw;
                 max-width: 350px;
@@ -223,7 +243,18 @@
                 border-radius: 40px;
                 /* background-color: #2a105abb; */
                 background-color: rgba(255, 255, 255, 0.476);
-                color: white;" type="text" name="evento_06" id="evento_06">
+                color: white;" type="number" name="evento_06" id="evento_06">
+                <br><br>
+
+                <label for="evento_06">PONTUAÇÃO EXTRA:</label><br>
+                <input style="
+                width: 63dvw;
+                max-width: 350px;
+                height: 25px;
+                border-radius: 40px;
+                /* background-color: #2a105abb; */
+                background-color: rgba(255, 255, 255, 0.476);
+                color: white;" type="number" name="evento_07" id="evento_06">
                 <br><br>
 
                 <label for="punicoes">PUNIÇÕES:</label><br>
@@ -234,7 +265,7 @@
                 border-radius: 40px;
                 /* background-color: #2a105abb; */
                 background-color: rgba(255, 255, 255, 0.476);
-                color: white;" type="text" name="punicoes" id="punicoes">
+                color: white;" type="number" name="punicoes" id="punicoes">
                 <br><br>
 
                 <label for="total">TOTAL:</label><br>
@@ -245,7 +276,7 @@
                 border-radius: 40px;
                 /* background-color: #2a105abb; */
                 background-color: rgba(255, 255, 255, 0.476);
-                color: white;" type="text" name="total" id="total">
+                color: white;" type="number" name="total" id="total">
                 <br><br>
 
 
@@ -253,14 +284,20 @@
                 width: 63dvw;
                 max-width: 350px;
                 border-radius: 40px;
-                height: 25px;" type="reset">Limpar</button><br>
+                height: 25px;" type="reset" class="botao" >Limpar</button><br>
 
                 <button style="
                 width: 63dvw;
                 max-width: 350px;
                 border-radius: 40px;
-                height: 25px;" type="submit">Confirmar</button>
+                height: 25px;" type="submit" class="botao">Confirmar</button><br>
             </form>
+
+            <a href="rank" class=""><button style="
+                    width: 63dvw;
+                    max-width: 350px;
+                    border-radius: 40px;
+                    height: 25px;" type="" class="botao">Rank</button></a>
         </div>
     </div>
 </body>

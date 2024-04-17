@@ -1,0 +1,33 @@
+-- database: c:\Users\USER\Desktop\Oloko\oloko\banco.db
+
+-- Pressione o botão ▷ no canto superior direito da janela para executar todo o arquivo.
+
+CREATE TABLE pontuacao (
+    cod int,
+    mp int,
+    ld int,
+    tn int,
+    qua int,
+    x1 int,
+    fn int,
+    ex int,
+    punicoes int,
+    total int,
+    PRIMARY KEY(cod)
+);
+
+INSERT INTO pontuacao(cod, mp, ld, tn, qua, x1, fn, ex, punicoes, total)
+VALUES(01, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(02, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(03, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(04, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(05, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(06, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(07, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(08, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(09, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(10, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(11, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(12, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+-- cod, mp, ld, tn, qua, x1, fn

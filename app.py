@@ -7,10 +7,18 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/rank')
+def rank():
+    return render_template('rank.html')
+
 
 @app.route('/login')
 def login():
     return render_template('login.html')
+
+@app.route('/adm')
+def adm():
+    return render_template('administrador.html')
 
 
 @app.route('/login', methods=['post'])
@@ -66,94 +74,100 @@ def processamento():
     cursor = conexao.cursor()
 
     cod = request.form['sala']
-    evento01 = request.form['evento_01']
-    evento02 = request.form['evento_02']
-    evento03 = request.form['evento_03']
-    evento04 = request.form['evento_04']
-    evento05 = request.form['evento_05']
-    evento06 = request.form['evento_06']
+    evento01: int = request.form['evento_01']
+    evento02: int = request.form['evento_02']
+    evento03: int = request.form['evento_03']
+    evento04: int = request.form['evento_04']
+    evento05: int = request.form['evento_05']
+    evento06: int = request.form['evento_06']
+    evento07: int = request.form['evento_07']
+    # ponto extra
+    punicoes: int = request.form['punicoes']
+    positivo: int = int(request.form['evento_01']) + int(request.form['evento_02']) + int(request.form['evento_03']) + int(request.form['evento_04']) + int(request.form['evento_05']) + int(request.form['evento_06']) + int(request.form['evento_07'])
+    negativo: int = int(request.form['punicoes'])
+    total: int = int(positivo) - int(negativo)
 
     if cod == "1aadm":
         cod = 1
-        comando = 'update pontuacao set mp =?, ld =?, tn =?, qua =?, x1 =?, fn =? where cod =?'
-        cursor.execute(comando,[evento01, evento02, evento03, evento04, evento05, evento06, cod])
+        comando = 'update pontuacao set mp =?, ld =?, tn =?, qua =?, x1 =?, fn =?, ex =?, punicoes =?, total =? where cod =?'
+        cursor.execute(comando,[evento01, evento02, evento03, evento04, evento05, evento06, evento07, punicoes, total, cod])
         conexao.commit()
         return render_template('administrador.html')
     
     elif cod == "1badm":
         cod = 2
-        comando = 'update pontuacao set mp =?, ld =?, tn =?, qua =?, x1 =?, fn =? where cod =?'
-        cursor.execute(comando,[evento01, evento02, evento03, evento04, evento05, evento06, cod])
+        comando = 'update pontuacao set mp =?, ld =?, tn =?, qua =?, x1 =?, fn =?, ex =?, punicoes =?, total =? where cod =?'
+        cursor.execute(comando,[evento01, evento02, evento03, evento04, evento05, evento06, evento07, punicoes, total, cod])
         conexao.commit()
         return render_template('administrador.html')
     
     elif cod == "1ads":
-        cod = 3
-        comando = 'update pontuacao set mp =?, ld =?, tn =?, qua =?, x1 =?, fn =? where cod =?'
-        cursor.execute(comando,[evento01, evento02, evento03, evento04, evento05, evento06, cod])
+        cod = 3        
+        comando = 'update pontuacao set mp =?, ld =?, tn =?, qua =?, x1 =?, fn =?, ex =?, punicoes =?, total =? where cod =?'
+        cursor.execute(comando,[evento01, evento02, evento03, evento04, evento05, evento06, evento07, punicoes, total, cod])
         conexao.commit()
         return render_template('administrador.html')
     
     elif cod == "1bds":
         cod = 4
-        comando = 'update pontuacao set mp =?, ld =?, tn =?, qua =?, x1 =?, fn =? where cod =?'
-        cursor.execute(comando,[evento01, evento02, evento03, evento04, evento05, evento06, cod])
+        comando = 'update pontuacao set mp =?, ld =?, tn =?, qua =?, x1 =?, fn =?, ex =?, punicoes =?, total =? where cod =?'
+        cursor.execute(comando,[evento01, evento02, evento03, evento04, evento05, evento06, evento07, punicoes, total, cod])
         conexao.commit()
         return render_template('administrador.html')
     
     elif cod == "2aadm":
         cod = 5
-        comando = 'update pontuacao set mp =?, ld =?, tn =?, qua =?, x1 =?, fn =? where cod =?'
-        cursor.execute(comando,[evento01, evento02, evento03, evento04, evento05, evento06, cod])
+        comando = 'update pontuacao set mp =?, ld =?, tn =?, qua =?, x1 =?, fn =?, ex =?, punicoes =?, total =? where cod =?'
+        cursor.execute(comando,[evento01, evento02, evento03, evento04, evento05, evento06, evento07, punicoes, total, cod])
         conexao.commit()
         return render_template('administrador.html')
     
     elif cod == "2badm":
         cod = 6
-        comando = 'update pontuacao set mp =?, ld =?, tn =?, qua =?, x1 =?, fn =? where cod =?'
-        cursor.execute(comando,[evento01, evento02, evento03, evento04, evento05, evento06, cod])
+        comando = 'update pontuacao set mp =?, ld =?, tn =?, qua =?, x1 =?, fn =?, ex =?, punicoes =?, total =? where cod =?'
+        cursor.execute(comando,[evento01, evento02, evento03, evento04, evento05, evento06, evento07, punicoes, total, cod])
         conexao.commit()
         return render_template('administrador.html')
     
     elif cod == "2ads":
         cod = 7
-        comando = 'update pontuacao set mp =?, ld =?, tn =?, qua =?, x1 =?, fn =? where cod =?'
-        cursor.execute(comando,[evento01, evento02, evento03, evento04, evento05, evento06, cod])
+        comando = 'update pontuacao set mp =?, ld =?, tn =?, qua =?, x1 =?, fn =?, ex =?, punicoes =?, total =? where cod =?'
+        cursor.execute(comando,[evento01, evento02, evento03, evento04, evento05, evento06, evento07, punicoes, total, cod])
         conexao.commit()
         return render_template('administrador.html')
     
     elif cod == "2bds":
         cod = 8
-        comando = 'update pontuacao set mp =?, ld =?, tn =?, qua =?, x1 =?, fn =? where cod =?'
-        cursor.execute(comando,[evento01, evento02, evento03, evento04, evento05, evento06, cod])
+        comando = 'update pontuacao set mp =?, ld =?, tn =?, qua =?, x1 =?, fn =?, ex =?, punicoes =?, total =? where cod =?'
+        cursor.execute(comando,[evento01, evento02, evento03, evento04, evento05, evento06, evento07, punicoes, total, cod])
         conexao.commit()
         return render_template('administrador.html')
     
     elif cod == "3aadm":
         cod = 9
-        comando = 'update pontuacao set mp =?, ld =?, tn =?, qua =?, x1 =?, fn =? where cod =?'
-        cursor.execute(comando,[evento01, evento02, evento03, evento04, evento05, evento06, cod])
+        comando = 'update pontuacao set mp =?, ld =?, tn =?, qua =?, x1 =?, fn =?, ex =?, punicoes =?, total =? where cod =?'
+        cursor.execute(comando,[evento01, evento02, evento03, evento04, evento05, evento06, evento07, punicoes, total, cod])
         conexao.commit()
         return render_template('administrador.html')
     
     elif cod == "3badm":
         cod = 10
-        comando = 'update pontuacao set mp =?, ld =?, tn =?, qua =?, x1 =?, fn =? where cod =?'
-        cursor.execute(comando,[evento01, evento02, evento03, evento04, evento05, evento06, cod])
+        comando = 'update pontuacao set mp =?, ld =?, tn =?, qua =?, x1 =?, fn =?, ex =?, punicoes =?, total =? where cod =?'
+        cursor.execute(comando,[evento01, evento02, evento03, evento04, evento05, evento06, evento07, punicoes, total, cod])
         conexao.commit()
         return render_template('administrador.html')
     
     elif cod == "3ads":
         cod = 11
-        comando = 'update pontuacao set mp =?, ld =?, tn =?, qua =?, x1 =?, fn =? where cod =?'
-        cursor.execute(comando,[evento01, evento02, evento03, evento04, evento05, evento06, cod])
+        comando = 'update pontuacao set mp =?, ld =?, tn =?, qua =?, x1 =?, fn =?, ex =?, punicoes =?, total =? where cod =?'
+        cursor.execute(comando,[evento01, evento02, evento03, evento04, evento05, evento06, evento07, punicoes, total, cod])
         conexao.commit()
         return render_template('administrador.html')
     
     elif cod == "3bds":
         cod = 12
-        comando = 'update pontuacao set mp =?, ld =?, tn =?, qua =?, x1 =?, fn =? where cod =?'
-        cursor.execute(comando,[evento01, evento02, evento03, evento04, evento05, evento06, cod])
+        comando = 'update pontuacao set mp =?, ld =?, tn =?, qua =?, x1 =?, fn =?, ex =?, punicoes =?, total =? where cod =?'
+        cursor.execute(comando,[evento01, evento02, evento03, evento04, evento05, evento06, evento07, punicoes, total, cod])
         conexao.commit()
         return render_template('administrador.html')
 
