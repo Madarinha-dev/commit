@@ -19,10 +19,6 @@ sala04 | 100  | 250  | 300  | 500
 sala05 | 100  | 250  | 300  | 500
 
 
-2- 
-Definir a senha das salas
-
-
 3- ok
 na tela [ administrador ] calcular o 
 total dos pontos de cada sala
