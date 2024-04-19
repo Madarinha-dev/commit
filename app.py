@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, session, redirect
 import sqlite3
 
 app = Flask(__name__)
+app.secret_key="123"
 
 @app.route('/')
 def index():
@@ -131,6 +132,22 @@ def ranke():
         pagina = pagina + f'SALA:__________ {r[1]} <br> PONTOS:__________{r[10]} <br> <br>'
     return pagina
 
+@app.route("/troca_de_senha", methods=['post'])
+def trocar():
+    #  sala_senha e nova_senha
+    if "adm" in session:
+        sala = request.form["sala_senha"]
+        senha = request.form["nova_senha"]
+
+        conexao = sqlite3.connect("banco.db")
+        cursor = conexao.cursor()
+
+        comando = 'update senhaa set senha=? where sala=?'
+        cursor.execute(comando,[senha, sala])
+        conexao.commit()
+        conexao.close()
+        return render_template('administrador.html')
+        
 
 
 
@@ -138,6 +155,7 @@ def ranke():
 def direcao():
     direcao = request.form['sala']
     senha = request.form['senha']
+
     dono = "fhe"
     zaadm = "1aadm"
     zbadm = "1badm"
@@ -152,61 +170,92 @@ def direcao():
     cads = "3ads"
     cbds = "3bds"
 
+    conexao = sqlite3.connect('banco.db')
+    cursor = conexao.cursor()
 
-    if direcao == "dono" and senha == dono:
-        return render_template('administrador.html')
-    
-    
-    elif direcao == "1aadm" and senha == zaadm:
-        return render_template('desafios.html')
-    
-    
-    elif direcao == "1badm" and senha == zbadm:
-        return render_template('desafios.html')
-    
-    
-    elif direcao == "1ads" and senha == zads:
-        return render_template('desafios.html')
-    
-    
-    elif direcao == "1bds" and senha == zbds:
-        return render_template('desafios.html')
-    
-    
-    elif direcao == "2aadm" and senha == xaadm:
-        return render_template('desafios.html')
-    
-    
-    elif direcao == "2badm" and senha == xbadm:
-        return render_template('desafios.html')
-    
-    
-    elif direcao == "2ads" and senha == xads:
-        return render_template('desafios.html')
-    
-    
-    elif direcao == "2bds" and senha == xbds:
-        return render_template('desafios.html')
-    
-    
-    elif direcao == "3aadm" and senha == caadm:
-        return render_template('desafios.html')
-    
-    
-    elif direcao == "3badm" and senha == cbadm:
-        return render_template('desafios.html')
-    
-    
-    elif direcao == "3ads" and senha == cads:
-        return render_template('desafios.html')
-    
-    
-    elif direcao == "3bds" and senha == cbds:
-        return render_template('desafios.html')
-    
-    
+    comando = "SELECT * FROM senhaa WHERE sala=? and senha=?"
+    cursor.execute(comando,[direcao,senha])
+    lista = cursor.fetchall()
+    conexao.commit()
+    lista = str(lista)
+    lista=lista.replace("[","").replace("]","").replace("(","").replace(")","")
+    lista = list(lista)
+    print(lista)
+
+    if direcao=="administrador":
+        cursor.execute(comando,[direcao,senha])
+        lista = cursor.fetchall()
+        if len(lista)>0:
+            session["adm"]=direcao
+            return render_template("administrador.html")
+        else:
+            return redirect("/login")
+        
+
+    elif direcao != "admnistrador":
+        cursor.execute(comando,[direcao,senha])
+        lista = cursor.fetchall()
+        if len(lista)>0:
+            session["aluno"]=direcao
+            return render_template("desafios.html")
+        else:
+            return redirect("/login")
     else:
-        return redirect('/login')
+        return redirect('/login') 
+    # if direcao == "ad" and senha == dono:
+    # if lista[0] == "administrador":
+    #     return render_template('administrador.html')
+    
+    
+    # elif direcao == "1aadm" and senha == zaadm:
+    #     return render_template('desafios.html')
+    
+    
+    # elif direcao == "1badm" and senha == zbadm:
+    #     return render_template('desafios.html')
+    
+    
+    # elif direcao == "1ads" and senha == zads:
+    #     return render_template('desafios.html')
+    
+    
+    # elif direcao == "1bds" and senha == zbds:
+    #     return render_template('desafios.html')
+    
+    
+    # elif direcao == "2aadm" and senha == xaadm:
+    #     return render_template('desafios.html')
+    
+    
+    # elif direcao == "2badm" and senha == xbadm:
+    #     return render_template('desafios.html')
+    
+    
+    # elif direcao == "2ads" and senha == xads:
+    #     return render_template('desafios.html')
+    
+    
+    # elif direcao == "2bds" and senha == xbds:
+    #     return render_template('desafios.html')
+    
+    
+    # elif direcao == "3aadm" and senha == caadm:
+    #     return render_template('desafios.html')
+    
+    
+    # elif direcao == "3badm" and senha == cbadm:
+    #     return render_template('desafios.html')
+    
+    
+    # elif direcao == "3ads" and senha == cads:
+    #     return render_template('desafios.html')
+    
+    
+    # elif direcao == "3bds" and senha == cbds:
+    #     return render_template('desafios.html')
+    
+    
+  
     
     
 @app.route('/processamento', methods=['post'])

@@ -31,3 +31,37 @@ VALUES(01, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 (12, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 
 -- cod, mp, ld, tn, qua, x1, fn
+
+
+
+
+
+=====================================================================================
+-- database: c:\Users\USER\Desktop\Oloko\oloko\banco.db
+
+-- Pressione o botão ▷ no canto superior direito da janela para executar todo o arquivo.
+
+DROP TABLE senhaa;
+
+CREATE TABLE senhaa( 
+    sala TEXT,
+    senha TEXT,
+    PRIMARY KEY(sala)
+);
+INSERT INTO senhaa(sala, senha)
+VALUES("1aadm", "1aadm"),
+("1badm","1badm"),
+("1ads","1ads"),
+("1bds","1bds"),
+
+("2aadm","2aadm"),
+("2badm","2badm"),
+("2ads","2ads"),
+("2bds","2bds"),
+
+("3aadm","3aadm"),
+("3badm","3badm"),
+("3ads","3ads"),
+("3bds","3bds"),
+
+("administrador","fhe")
