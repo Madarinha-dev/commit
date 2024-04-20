@@ -1,6 +1,33 @@
 banco de dados para guardar os pontos de cada sala
 ex:
 
+- SUGESTÕES:
+- [ Suporte para o site ]
+
+- [ poder adicionar e remover eventos               ]
+  [ OBS: ele teria que atualizar o PDF se ele acres-]
+  [ centar eventos ou remover eventos novos         ]
+
+- [ colocar a legenda dos criadores e participantes ]
+  [ do projeto                                      ]
+  [ - Allysson                                      ]
+  [ - Élida                                         ]
+  [ - PH                                            ] 
+  [ - Fhellype                                      ]
+  [ - Juliana                                       ]
+  [ - Daniela                                       ]
+  [ - Ketlly                                        ]
+  [ - Miqueas                                       ]
+  [ https://nicepage.com/pt/feature/rodape-do-site-552072]
+
+  
+
+- [ mudar a imagem do fundo da tela de rank para fa-]
+  [ cilitar a visualização do placar ou colocar uma ]
+  [ DIV com fundo "preto" transparênte              ]
+
+
+
 os eventos:
 - Mapa do maroto
 - torneio tri bruxo
@@ -38,6 +65,6 @@ Tela: [desafios.html]:
 - mostrar os pontos nessa tela de acordo com as informações no login [ back-end ]
 
 Tela: [administrador]:
-- configurar a função de definir a senha das salas [ back-end]
-- Montar uma tela, mostrando o ranke em base no total de pontos do banco de dados [ front and back = ok ]
+- configurar a função de definir a senha das salas [ back-end] ok
+- Montar uma tela, mostrando o ranke em base no total de pontos do banco de dados [ front and back ] ok
 
