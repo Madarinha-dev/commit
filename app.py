@@ -26,10 +26,6 @@ def ranke():
     conexao = sqlite3.connect('banco.db')
     cursor = conexao.cursor()
 
-    # sql = """
-    # SELECT sala, total FROM pontuacao ORDER BY total ;
-    # """
-
     sql = """
     SELECT * FROM pontuacao ORDER BY total DESC;
     """
@@ -52,7 +48,7 @@ def ranke():
         }
 
         body {
-            background-image: url(/static/img/imagens/fundo\ 05.jpeg);
+            background-image: url(/static/img/imagens/fundo04.jpeg);
             padding: 10px;
             display: flex;
             justify-content: center;
@@ -202,60 +198,6 @@ def direcao():
             return redirect("/login")
     else:
         return redirect('/login') 
-    # if direcao == "ad" and senha == dono:
-    # if lista[0] == "administrador":
-    #     return render_template('administrador.html')
-    
-    
-    # elif direcao == "1aadm" and senha == zaadm:
-    #     return render_template('desafios.html')
-    
-    
-    # elif direcao == "1badm" and senha == zbadm:
-    #     return render_template('desafios.html')
-    
-    
-    # elif direcao == "1ads" and senha == zads:
-    #     return render_template('desafios.html')
-    
-    
-    # elif direcao == "1bds" and senha == zbds:
-    #     return render_template('desafios.html')
-    
-    
-    # elif direcao == "2aadm" and senha == xaadm:
-    #     return render_template('desafios.html')
-    
-    
-    # elif direcao == "2badm" and senha == xbadm:
-    #     return render_template('desafios.html')
-    
-    
-    # elif direcao == "2ads" and senha == xads:
-    #     return render_template('desafios.html')
-    
-    
-    # elif direcao == "2bds" and senha == xbds:
-    #     return render_template('desafios.html')
-    
-    
-    # elif direcao == "3aadm" and senha == caadm:
-    #     return render_template('desafios.html')
-    
-    
-    # elif direcao == "3badm" and senha == cbadm:
-    #     return render_template('desafios.html')
-    
-    
-    # elif direcao == "3ads" and senha == cads:
-    #     return render_template('desafios.html')
-    
-    
-    # elif direcao == "3bds" and senha == cbds:
-    #     return render_template('desafios.html')
-    
-    
-  
     
     
 @app.route('/processamento', methods=['post'])

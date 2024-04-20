@@ -10,21 +10,21 @@ ex:
 
 - [ colocar a legenda dos criadores e participantes ]
   [ do projeto                                      ]
-  [ - Allysson                                      ]
-  [ - Élida                                         ]
+  [ - Allysson ok                                   ]
+  [ - Élida    ok                                   ]
   [ - PH                                            ] 
-  [ - Fhellype                                      ]
-  [ - Juliana                                       ]
-  [ - Daniela                                       ]
-  [ - Ketlly                                        ]
-  [ - Miqueas                                       ]
+  [ - Fhellype  ok                                  ]
+  [ - Juliana   ok                                  ]
+  [ - Daniela   ok                                  ]
+  [ - Ketlly    ok                                  ]
+  [ - Miqueas   ok                                  ]
   [ https://nicepage.com/pt/feature/rodape-do-site-552072]
 
   
 
-- [ mudar a imagem do fundo da tela de rank para fa-]
-  [ cilitar a visualização do placar ou colocar uma ]
-  [ DIV com fundo "preto" transparênte              ]
+- [ mudar a imagem do fundo da tela de rank para fa-] ok
+  [ cilitar a visualização do placar ou colocar uma ] ok
+  [ DIV com fundo "preto" transparênte              ] ok 
 
 
 
@@ -52,11 +52,11 @@ total dos pontos de cada sala
 
 
 4- ok
-adicionar o campo [ pontuacao extra ]
+adicionar o campo [ pontuacao extra ] ok
 
 
 5- ok
-baixar o PDF do evento:
+baixar o PDF do evento: ok
 <a href="meu_arquivo.pdf" download="nome_do_arquivo.pdf">Baixar PDF</a>
 
 
@@ -64,7 +64,7 @@ Tela: [desafios.html]:
 - Layout de exibição [ front-and = 0 ]
 - mostrar os pontos nessa tela de acordo com as informações no login [ back-end ]
 
-Tela: [administrador]:
+Tela: [administrador]: ok
 - configurar a função de definir a senha das salas [ back-end] ok
 - Montar uma tela, mostrando o ranke em base no total de pontos do banco de dados [ front and back ] ok
 

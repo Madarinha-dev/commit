@@ -17,7 +17,6 @@
             width: 130px;
             height: 130px;
             border-radius: 50%;
-            /* margin-left: 4%; */
             padding-left: 12%;
             margin-bottom: 20px;
             margin-top: 20px;
@@ -27,7 +26,6 @@
         div.casa {
             display: flex;
             justify-content: space-between;
-            /* background-color: red; */
         }
 
         div.casa > p.desafios {
@@ -79,44 +77,67 @@
             box-shadow: 0px 5px 15px;
         }
 
-        /* div.casa > p.desafios {
-            color: #2A105A;
-            font-size: 55px;
-            margin-right: 5%;
-            margin-top: 40px;
-            font-family:Georgia, 'Times New Roman', Times, serif;
-        } */
-
         div.casa > P.desafios > a {
             font-size: 20px;
-            /* background-color: red; */
             margin-left: 100px;
             margin-top: -8px;
             position: absolute;
             color: #2A105A;
             text-decoration: none;
-            /* font-family: Georgia, 'Times New Roman', Times, serif; */
             font-style: oblique;
+        }
+
+        footer {
+            background-color: #2A105A;
+            margin-top: 300px;
+        }
+
+        footer > h2 {
+            color: white;
+            padding: 20px;
+            font-size: 50px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+        }
+
+        footer > div.bairro {
+            display: flex;
+            padding: 18px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        footer > div.bairro > p.blocos a {
+            text-decoration: none;
+            margin: 10px;
+            font-size: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            color: white;
+            background-color: rgba(255, 0, 0, 0);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        footer > div.bairro > p.blocos > a > span > img {
+            width: 120px;
+            height: 120px;
+            border-radius: 15px;
+            margin-bottom: 10px;
+        }
+
+        footer > div.bairro > p.blocos:hover {
+            transition: 0.2s;
+            border: 3px solid rgb(0, 225, 255);
+            box-shadow: 0px 5px 15px;
+            border-radius: 10px;
         }
 
         
     </style>
 </head>
 <body>
-    <!-- <a href="login" class=""><button style="
-        width: 57px;
-        max-width: 350px;
-        border-radius: 10px;
-        height: 25px;
-        position: absolute;
-        top: 15px;
-        left: 8px;" type="" class="botao">Voltar</button></a> -->
-
     <div class="casa">
-        <!-- <img class="trofeu" src="/static/img/imagens/trofeu.jpeg" alt=""> -->
         <a href="login"><img class="trofeu" src="/static/img/imagens/trofeu.jpeg" alt=""></a>
         <p class="desafios">Desafios <br> <a href="/static/documentos/Taça das Casas 2024.pdf" download="Taça das Casas 2024">Baixar PDF</a></p>
-        <!-- <a href="meu_arquivo.pdf" download="nome_do_arquivo.pdf">Baixar PDF</a> -->
     </div>
 
     <div class="jogos">
@@ -127,5 +148,113 @@
         <a href=""><img src="/static/img/imagens/x1.png" alt=""></a>
         <a href=""><img src="/static/img/imagens/ordem-da-fenix.png" alt=""></a>
     </div>
+
+
+    <footer style="
+    margin-left: 0px;
+    margin-bottom: 0px;">
+    <h2>Participantes</h2>
+        <div class="bairro">
+
+            <p class="blocos">
+                <a href="https://www.instagram.com/fhellype_vinicius/">
+                    <span>
+                        <img src="/static/img/imagens/Fhellype.jpeg" alt=""><br>
+                        <span>INTEGRANTE</span><br>
+                        <span>Nome: Fhellype</span><br>
+                        <span>Sala: 3°B DS</span><br>
+                        <span>Funsão: Programador Full</span><br>
+                        <span>ANO: 2024</span>
+                    </span>
+                </a>
+            </p>
+
+            <p class="blocos">
+                <a href="https://www.instagram.com/_im.julyy_?igsh=MTR0NHNpbzIzbHpkZg==">
+                    <span>
+                        <img src="/static/img/imagens/Juliana.jpeg" alt=""><br>
+                        <span>INTEGRANTE</span><br>
+                        <span>Nome: Juliana</span><br>
+                        <span>Sala: 3°B DS</span><br>
+                        <span>Funsão: Design/ Projetista</span><br>
+                        <span>ANO: 2024</span>
+                    </span>
+                </a>
+            </p>
+
+            <p class="blocos">
+                <a href="https://www.instagram.com/dani__celmaa?igsh=MXQwandqbHYwZjI3eg==">
+                    <span>
+                        <img src="/static/img/imagens/Daniela.jpeg" alt=""><br>
+                        <span>INTEGRANTE</span><br>
+                        <span>Nome: Daniela</span><br>
+                        <span>Sala: 3°B DS</span><br>
+                        <span>Funsão: Auxilio de img</span><br>
+                        <span>ANO: 2024</span>
+                    </span>
+                </a>
+            </p>
+
+            <p class="blocos">
+                <a href="https://www.instagram.com/k_ketlly_k?igsh=NHBuZGR2cGE1ejdq">
+                    <span>
+                        <img src="/static/img/imagens/Ketlly.jpeg" alt=""><br>
+                        <span>INTEGRANTE</span><br>
+                        <span>Nome: Ketlly</span><br>
+                        <span>Sala: 3°B DS</span><br>
+                        <span>Funsão: Desing/projetista</span><br>
+                        <span>ANO: 2024</span>
+                    </span>
+                </a>
+            </p>
+
+            <p class="blocos">
+                <a href="https://www.instagram.com/miqueias.alves018?igsh=MWd1YzBpaXZ5OXVqZA==">
+                    <span>
+                        <img src="/static/img/imagens/Miqueas.jpeg" alt=""><br>
+                        <span>INTEGRANTE</span><br>
+                        <span>Nome: Miqueas</span><br>
+                        <span>Sala: 3°B DS</span><br>
+                        <span>Funsão: Auxílio de img</span><br>
+                        <span>ANO: 2024</span>
+                    </span>
+                </a>
+            </p>
+
+        </div>
+        <h2>Contribuentes</h2>
+        <div class="bairro">
+
+
+            <p class="blocos">
+                <a href="https://www.instagram.com/allysson979?igsh=MW5yeHh4enExM3M4Mw==">
+                    <span>
+                        <img src="/static/img/imagens/Allysson.jpeg" alt=""><br>
+                        <span>CONTRIBUIU</span><br>
+                        <span>Nome: Allysson</span><br>
+                        <span>Sala: 3°B DS</span><br>
+                        <span>Funsão: Programador Back</span><br>
+                        <span>ANO: 2024</span>
+                    </span>
+                </a>
+            </p>
+
+
+            <p class="blocos">
+                <a href="https://www.instagram.com/imdonewith.it?igsh=MXNjb3hlcDFvbWRm">
+                    <span>
+                        <img src="/static/img/imagens/Élida.jpeg" alt=""><br>
+                        <span>CONTRIBUIU</span><br>
+                        <span>Nome: Élida</span><br>
+                        <span>Sala: 3°B ADM</span><br>
+                        <span>Funsão: Auxílio</span><br>
+                        <span>ANO: 2024</span>
+                    </span>
+                </a>
+            </p>
+
+
+        </div>
+    </footer>
 </body>
 </html>
