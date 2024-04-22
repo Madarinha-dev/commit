@@ -1,12 +1,20 @@
 banco de dados para guardar os pontos de cada sala
 ex:
 
-- SUGESTÕES:
+- SUGESTÕES: ok
 - [ Suporte para o site ]
+
+
+
+
 
 - [ poder adicionar e remover eventos               ]
   [ OBS: ele teria que atualizar o PDF se ele acres-]
   [ centar eventos ou remover eventos novos         ]
+
+
+
+
 
 - [ colocar a legenda dos criadores e participantes ]
   [ do projeto                                      ]
@@ -17,7 +25,7 @@ ex:
   [ - Juliana   ok                                  ]
   [ - Daniela   ok                                  ]
   [ - Ketlly    ok                                  ]
-  [ - Miqueas   ok                                  ]
+  [ - Miqueias   ok                                  ]
   [ https://nicepage.com/pt/feature/rodape-do-site-552072]
 
   
@@ -68,3 +76,23 @@ Tela: [administrador]: ok
 - configurar a função de definir a senha das salas [ back-end] ok
 - Montar uma tela, mostrando o ranke em base no total de pontos do banco de dados [ front and back ] ok
 
+function abrirwhatsapp() {
+    var estado = document.querySelector('select#estado').value;
+    var cidade = document.querySelector('select#cidade').value;
+    var rua = document.querySelector('input#rua').value;
+    var numero = document.querySelector('input#numero').value;
+    var endereco = document.querySelector('select#endereco').value;
+    var menssagem = document.querySelector('textarea#area-de-texto').value;
+    var url = "https://wa.me/558188830927?text="
+        + "*Formulario de contato*" + "%0a"
+        + "%0a"
+        + "*Estado*: " + estado + "%0a"
+        + "*Cidade*: " + cidade + "%0a"
+        + "*Rua*: " + rua + "%0a"
+        + "*Número*: " + numero + "%0a"
+        + "*Endereço*: " + endereco + "%0a"
+        + "*Menssagem* :" + menssagem;
+    window.open(url, '_black').focus();
+}
+
+ativado com a função de onclick

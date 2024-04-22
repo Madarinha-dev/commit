@@ -1,12 +1,183 @@
-from flask import Flask, render_template, request, session, redirect
+from flask import Flask, render_template, request, session, redirect, url_for
 import sqlite3
 
 app = Flask(__name__)
 app.secret_key="123"
 
+@app.route('/zap')
+def zap():
+    return redirect("http://wa.me/558185807461?text=")
+
+
+
+#  <!-- mapa-maroto  livro  torneio  quadribol  x1   ordem
+@app.route('/mapa-do-maroto')
+def mapa():
+    if "aluno" in session:
+        sala = session['aluno']
+        print(sala)
+        conexao = sqlite3.connect('banco.db')
+        cursor = conexao.cursor()
+
+        sql = """
+        SELECT mp FROM pontuacao where sala=?;
+        """
+        cursor.execute(sql, [sala])
+
+        resultado = cursor.fetchall()
+        conexao.commit()
+        print(resultado)
+        resultado = str(resultado)
+        conexao.close()
+        resultado = resultado.replace("[","").replace("]","").replace("(","").replace(")","")
+        
+        return render_template('rank01.html', teste=resultado)
+    else:
+        return redirect('/login')
+    
+
+
+@app.route('/livro')
+def livro():
+    if "aluno" in session:
+        sala = session['aluno']
+        print(sala)
+        conexao = sqlite3.connect('banco.db')
+        cursor = conexao.cursor()
+
+        sql = """
+        SELECT ld FROM pontuacao where sala=?;
+        """
+        cursor.execute(sql, [sala])
+
+        resultado = cursor.fetchall()
+        conexao.commit()
+        print(resultado)
+        resultado = str(resultado)
+        conexao.close()
+        resultado = resultado.replace("[","").replace("]","").replace("(","").replace(")","")
+        
+        return render_template('rank04.html', teste=resultado)
+    else:
+        return redirect('/login')
+
+
+@app.route('/torneio')
+def torneio():
+    if "aluno" in session:
+        sala = session['aluno']
+        print(sala)
+        conexao = sqlite3.connect('banco.db')
+        cursor = conexao.cursor()
+
+        sql = """
+        SELECT tn FROM pontuacao where sala=?;
+        """
+        cursor.execute(sql, [sala])
+
+        resultado = cursor.fetchall()
+        conexao.commit()
+        print(resultado)
+        resultado = str(resultado)
+        conexao.close()
+        resultado = resultado.replace("[","").replace("]","").replace("(","").replace(")","")
+        
+        return render_template('rank02.html', teste=resultado)
+    else:
+        return redirect('/login')
+
+
+@app.route('/quadribol')
+def quadribol():
+    if "aluno" in session:
+        sala = session['aluno']
+        print(sala)
+        conexao = sqlite3.connect('banco.db')
+        cursor = conexao.cursor()
+
+        sql = """
+        SELECT qua FROM pontuacao where sala=?;
+        """
+        cursor.execute(sql, [sala])
+
+        resultado = cursor.fetchall()
+        conexao.commit()
+        print(resultado)
+        resultado = str(resultado)
+        conexao.close()
+        resultado = resultado.replace("[","").replace("]","").replace("(","").replace(")","")
+        
+        return render_template('rank03.html', teste=resultado)
+    else:
+        return redirect('/login')
+
+
+@app.route('/x1')
+def x1():
+    if "aluno" in session:
+        sala = session['aluno']
+        print(sala)
+        conexao = sqlite3.connect('banco.db')
+        cursor = conexao.cursor()
+
+        sql = """
+        SELECT x1 FROM pontuacao where sala=?;
+        """
+        cursor.execute(sql, [sala])
+
+        resultado = cursor.fetchall()
+        conexao.commit()
+        print(resultado)
+        resultado = str(resultado)
+        conexao.close()
+        resultado = resultado.replace("[","").replace("]","").replace("(","").replace(")","")
+        
+        return render_template('rank05.html', teste=resultado)
+    else:
+        return redirect('/login')
+
+
+@app.route('/ordem')
+def fenix():
+    if "aluno" in session:
+        sala = session['aluno']
+        print(sala)
+        conexao = sqlite3.connect('banco.db')
+        cursor = conexao.cursor()
+
+        sql = """
+        SELECT fn FROM pontuacao where sala=?;
+        """
+        cursor.execute(sql, [sala])
+
+        resultado = cursor.fetchall()
+        conexao.commit()
+        print(resultado)
+        resultado = str(resultado)
+        conexao.close()
+        resultado = resultado.replace("[","").replace("]","").replace("(","").replace(")","")
+        
+        return render_template('rank06.html', teste=resultado)
+    else:
+        return redirect('/login')
+
+
+
+
+
 @app.route('/')
 def index():
     return render_template('index.html')
+
+
+@app.route('/desafios')
+def desafios():
+    if "aluno" in session:
+
+        return render_template('desafios.html')
+    else:
+        return redirect("/login")
+    
 
 @app.route('/rank')
 def rank():
@@ -181,6 +352,8 @@ def direcao():
     if direcao=="administrador":
         cursor.execute(comando,[direcao,senha])
         lista = cursor.fetchall()
+
+
         if len(lista)>0:
             session["adm"]=direcao
             return render_template("administrador.html")
@@ -191,8 +364,11 @@ def direcao():
     elif direcao != "admnistrador":
         cursor.execute(comando,[direcao,senha])
         lista = cursor.fetchall()
+
+
         if len(lista)>0:
-            session["aluno"]=direcao
+            session["aluno"]=direcao 
+            # if "aluno" in session
             return render_template("desafios.html")
         else:
             return redirect("/login")
