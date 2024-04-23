@@ -1,6 +1,16 @@
 banco de dados para guardar os pontos de cada sala
 ex:
 
+
+
+
+============================================================================================
+14/05 - APRESENTAÇÃO DO TRABALHO
+04/06 - ENTREGA DO TRABALHO
+============================================================================================
+
+
+
 - SUGESTÕES: ok
 - [ Suporte para o site ]
 
@@ -25,7 +35,7 @@ ex:
   [ - Juliana   ok                                  ]
   [ - Daniela   ok                                  ]
   [ - Ketlly    ok                                  ]
-  [ - Miqueias   ok                                  ]
+  [ - Miqueias  ok                                  ]
   [ https://nicepage.com/pt/feature/rodape-do-site-552072]
 
   

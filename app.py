@@ -10,7 +10,6 @@ def zap():
 
 
 
-#  <!-- mapa-maroto  livro  torneio  quadribol  x1   ordem
 @app.route('/mapa-do-maroto')
 def mapa():
     if "aluno" in session:
