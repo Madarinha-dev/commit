@@ -399,24 +399,6 @@ def processamento():
         comando = 'update pontuacao set sala =?, mp =?, ld =?, tn =?, qua =?, x1 =?, fn =?, ex =?, punicoes =?, total =? where cod =?'
         cursor.execute(comando,[sala, evento01, evento02, evento03, evento04, evento05, evento06, evento07, punicoes, total, cod])
         conexao.commit()
-        # sql='select mp,ld,tn,qua,x1,fn,ex,punicoes from pontuacao where cod=?'
-        # cursor.execute(sql,[cod])
-        # lista=cursor.fetchall()
-        # lista=str(lista).replace("[")
-        # print(lista)
-        # mp_antigo=lista[0]
-        # ld_antigo=lista[1]
-        # tn_antigo=lista[2]
-        # qua_antigo=lista[3]
-        # x1_antigo=lista[4]
-        # fn_antigo=lista[5]
-        # ex_antigo=lista[6]
-        # punicoes=lista[7]
-        # print(mp_antigo,ld_antigo)
-
-        # comando = 'update pontuacao set sala =?, mp =?, ld =?, tn =?, qua =?, x1 =?, fn =?, ex =?, punicoes =?, total =? where cod =?'
-        # cursor.execute(comando,[sala, evento01, evento02, evento03, evento04, evento05, evento06, evento07, punicoes, total, cod])
-        # conexao.commit()
         return render_template('administrador.html')
     
     elif cod == "1badm":
