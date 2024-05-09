@@ -12,99 +12,31 @@ ex:
 
 
 - SUGESTÕES: ok
-- [ Suporte para o site ]
 
+  TOP-EXTRAS
 - [ histórico das salas desde o inicio do evento ]
 - [ mostrar quantos pontos a sala gastou comprando benefícios para a sala]
 
+- [ poder adicionar e remover eventos                   ]
+  [ OBS: ele teria que atualizar o PDF se ele acres-    ]
+  [ centar eventos ou remover eventos novos             ]
 
+=============================================================================================
 
+  ALTERAÇÕES:
+- [ tela de login:                                      ] 
+  [  mudar o texto para (desafios das casas) ok         ]
+  [  colocar uma imagem na parte black transparente ok  ]
+  [ baixar uma fonte para colocar no site ok            ]
+  [ colocar notificação de quando a senha estiver errada]
 
-- [ poder adicionar e remover eventos               ]
-  [ OBS: ele teria que atualizar o PDF se ele acres-]
-  [ centar eventos ou remover eventos novos         ]
+- [ tela dos desafios:                          ]
+  [ "baixar PDF" deixar intuitivo               ]
+  [ uma forma da pessoa saber o botão de voltar ]
+  [ pensar num formulário da carta que vai pra  ]
+  [ oloko com as informações                    ]
 
+- [ tela de pontos:                             ]
+  [ montar um estilo para mostrar os pontos ok  ]
 
-
-
-
-- [ colocar a legenda dos criadores e participantes ]
-  [ do projeto                                      ]
-  [ - Allysson ok                                   ]
-  [ - Élida    ok                                   ]
-  [ - PH                                            ] 
-  [ - Fhellype  ok                                  ]
-  [ - Juliana   ok                                  ]
-  [ - Daniela   ok                                  ]
-  [ - Ketlly    ok                                  ]
-  [ - Miqueias  ok                                  ]
-  [ https://nicepage.com/pt/feature/rodape-do-site-552072]
-
-  
-
-- [ mudar a imagem do fundo da tela de rank para fa-] ok
-  [ cilitar a visualização do placar ou colocar uma ] ok
-  [ DIV com fundo "preto" transparênte              ] ok 
-
-
-
-os eventos:
-- Mapa do maroto
-- torneio tri bruxo
-- Quadribol
-- Os livros da Hermiose
-- x1 da sala precisa
-- A ordem da Fenix
-
-1- ok
-
-sala   | EV01 | EV02 | EV03 | EV04 
-sala01 | 100  | 250  | 300  | 500
-sala02 | 100  | 250  | 300  | 500
-sala03 | 100  | 250  | 300  | 500
-sala04 | 100  | 250  | 300  | 500
-sala05 | 100  | 250  | 300  | 500
-
-
-3- ok
-na tela [ administrador ] calcular o 
-total dos pontos de cada sala
-
-
-4- ok
-adicionar o campo [ pontuacao extra ] ok
-
-
-5- ok
-baixar o PDF do evento: ok
-<a href="meu_arquivo.pdf" download="nome_do_arquivo.pdf">Baixar PDF</a>
-
-
-Tela: [desafios.html]:
-- Layout de exibição [ front-and = 0 ]
-- mostrar os pontos nessa tela de acordo com as informações no login [ back-end ]
-
-Tela: [administrador]: ok
-- configurar a função de definir a senha das salas [ back-end] ok
-- Montar uma tela, mostrando o ranke em base no total de pontos do banco de dados [ front and back ] ok
-
-function abrirwhatsapp() {
-    var estado = document.querySelector('select#estado').value;
-    var cidade = document.querySelector('select#cidade').value;
-    var rua = document.querySelector('input#rua').value;
-    var numero = document.querySelector('input#numero').value;
-    var endereco = document.querySelector('select#endereco').value;
-    var menssagem = document.querySelector('textarea#area-de-texto').value;
-    var url = "https://wa.me/558188830927?text="
-        + "*Formulario de contato*" + "%0a"
-        + "%0a"
-        + "*Estado*: " + estado + "%0a"
-        + "*Cidade*: " + cidade + "%0a"
-        + "*Rua*: " + rua + "%0a"
-        + "*Número*: " + numero + "%0a"
-        + "*Endereço*: " + endereco + "%0a"
-        + "*Menssagem* :" + menssagem;
-    window.open(url, '_black').focus();
-}
-
-ativado com a função de onclick
+=============================================================================================

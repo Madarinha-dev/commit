@@ -5,21 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <style>
+        @font-face {
+            font-family: "oloko";
+            src: url(/static/Fonte/magic_school/MagicSchoolOne.ttf) format("truetype");
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: "oloko_dois";
+            src: url(/static/Fonte/magic_school/MagicSchoolTwo.ttf) format("truetype");
+            font-weight: 400;
+            font-style: normal;
+        }
+
+
         * {
             padding: 0%;
             margin: 0%;
         }
 
         body {
-            background-image: url(/static/img/imagens/fundo04.jpeg);
+            /* background-image: url(/static/img/imagens/fundo04.jpeg); */
+            background-image:url(/static/img/imagens/login_01.jpeg) ;
+            background-position: top;
+            background-size: auto;
             display: flex;
             justify-content: center;
         }
 
+        p#titulo {
+            /* color: #7744d5; */
+            color: rgb(25, 0, 255);
+            /* color: black; */
+            font-family: "oloko";
+            font-size: 70px;
+        }
+
         div.content {
             background-color: rgba(0, 0, 0, 0.563);
+            /* background-image: url(/oloko/static/img/imagens/login_02.jpeg); */
             position: absolute;
-            margin-top: 10dvh;
+            /* margin-top: 10dvh; */
+            margin-top: 48dvh;
             width: 70dvw;
             max-width: 400px;
             padding-bottom: 20px;
@@ -30,15 +58,20 @@
 
         .login {
             color: white;
-            font-size: 25px;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            margin-left: 38%;
+            font-size: 40px;
+            /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+            margin-left: 12%;
+            
+            font-family: "oloko";
+            
         }
     </style>
 </head>
 <body>
+    <p id="titulo">Taça das Casas</p>
     <div class="content">
-        <span class="login" >Login</span>
+        <!-- <span class="login" >Taça das Casas</span> -->
+        <span class="login">Qual é a sua Casa?</span>
         <form action="login" id="meuform" method="post">
             <label 
             style="color: white;
@@ -50,7 +83,7 @@
             max-width: 350px;
             height: 25px;
             border-radius: 40px;
-            background-color: rgba(0, 0, 0, 0.359);
+            background-color: rgba(46, 32, 32, 0.359);
             color: white;" name="sala" id="salaa">
                 <option value="administrador">administrador</option>
                 <option value="1°A ADM">1°A ADM</option>

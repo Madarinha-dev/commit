@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafios</title>
     <style>
+         @font-face {
+            font-family: "oloko";
+            src: url(/static/Fonte/magic_school/MagicSchoolOne.ttf) format("truetype");
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: "oloko_dois";
+            src: url(/static/Fonte/magic_school/MagicSchoolTwo.ttf) format("truetype");
+            font-weight: 400;
+            font-style: normal;
+        }
+
+
         * {
             margin: 0;
             padding: 0;
@@ -30,10 +45,14 @@
 
         div.casa > p.desafios {
             color: #2A105A;
-            font-size: 55px;
-            margin-right: 5%;
-            margin-top: 40px;
-            font-family:Georgia, 'Times New Roman', Times, serif;
+            /* font-size: 55px; */
+            font-size: 60px;
+            /* margin-right: 5%; */
+            margin-right: 4%;
+            margin-top: 25px;
+            /* margin-top: 40px; */
+            /* font-family:Georgia, 'Times New Roman', Times, serif; */
+            font-family: "oloko";
         }
 
         div.jogos {
@@ -84,12 +103,14 @@
 
         div.casa > P.desafios > a {
             font-size: 20px;
-            margin-left: 100px;
+            margin-left: 50px;
             margin-top: -8px;
             position: absolute;
             color: #2A105A;
             text-decoration: none;
             font-style: oblique;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        
         }
 
         footer {
@@ -143,7 +164,7 @@
     <audio autoplay loop src="/static/som/trilha_sonora.mpeg"></audio>
     <div class="casa">
         <a href="login"><img class="trofeu" src="/static/img/imagens/trofeu.jpeg" alt=""></a>
-        <p class="desafios">Desafios <br> <a href="/static/documentos/Taça das Casas 2024.pdf" download="Taça das Casas 2024">Baixar PDF</a></p>
+        <p class="desafios">Desafios <br> <a href="/static/documentos/Taça das Casas 2024.pdf" download="Taça das Casas 2024">{XXXX}</a></p>
     </div>
 
     <div class="jogos">

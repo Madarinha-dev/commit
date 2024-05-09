@@ -28,7 +28,7 @@ def mapa():
         print(resultado)
         resultado = str(resultado)
         conexao.close()
-        resultado = resultado.replace("[","").replace("]","").replace("(","").replace(")","")
+        resultado = resultado.replace("[","").replace("]","").replace("(","").replace(")","").replace(",","")
         
         return render_template('rank01.html', teste=resultado)
     else:
@@ -54,7 +54,7 @@ def livro():
         print(resultado)
         resultado = str(resultado)
         conexao.close()
-        resultado = resultado.replace("[","").replace("]","").replace("(","").replace(")","")
+        resultado = resultado.replace("[","").replace("]","").replace("(","").replace(")","").replace(",","")
         
         return render_template('rank04.html', teste=resultado)
     else:
@@ -79,7 +79,7 @@ def torneio():
         print(resultado)
         resultado = str(resultado)
         conexao.close()
-        resultado = resultado.replace("[","").replace("]","").replace("(","").replace(")","")
+        resultado = resultado.replace("[","").replace("]","").replace("(","").replace(")","").replace(",","")
         
         return render_template('rank02.html', teste=resultado)
     else:
@@ -104,7 +104,7 @@ def quadribol():
         print(resultado)
         resultado = str(resultado)
         conexao.close()
-        resultado = resultado.replace("[","").replace("]","").replace("(","").replace(")","")
+        resultado = resultado.replace("[","").replace("]","").replace("(","").replace(")","").replace(",","")
         
         return render_template('rank03.html', teste=resultado)
     else:
@@ -129,7 +129,7 @@ def x1():
         print(resultado)
         resultado = str(resultado)
         conexao.close()
-        resultado = resultado.replace("[","").replace("]","").replace("(","").replace(")","")
+        resultado = resultado.replace("[","").replace("]","").replace("(","").replace(")","").replace(",","")
         
         return render_template('rank05.html', teste=resultado)
     else:
@@ -154,7 +154,7 @@ def fenix():
         print(resultado)
         resultado = str(resultado)
         conexao.close()
-        resultado = resultado.replace("[","").replace("]","").replace("(","").replace(")","")
+        resultado = resultado.replace("[","").replace("]","").replace("(","").replace(")","").replace(",","")
         
         return render_template('rank06.html', teste=resultado)
     else:
@@ -218,7 +218,7 @@ def ranke():
         }
 
         body {
-            background-image: url(/static/img/imagens/fundo04.jpeg);
+            background-image: url(/static/img/imagens/fundo02.jpeg);
             padding: 10px;
             display: flex;
             justify-content: center;
