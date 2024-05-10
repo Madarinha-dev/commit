@@ -31,7 +31,7 @@ ex:
   [ colocar notificação de quando a senha estiver errada]
 
 - [ tela dos desafios:                          ]
-  [ "baixar PDF" deixar intuitivo               ]
+  [ "baixar PDF" deixar intuitivo ok            ]
   [ uma forma da pessoa saber o botão de voltar ]
   [ pensar num formulário da carta que vai pra  ]
   [ oloko com as informações                    ]

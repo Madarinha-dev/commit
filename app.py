@@ -212,13 +212,29 @@ def ranke():
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rank</title>
     <style>
+        @font-face {
+            font-family: "oloko";
+            src: url(/static/Fonte/magic_school/MagicSchoolOne.ttf) format("truetype");
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: "oloko_dois";
+            src: url(/static/Fonte/magic_school/MagicSchoolTwo.ttf) format("truetype");
+            font-weight: 400;
+            font-style: normal;
+        }
+
         * {
+            
             padding: 0px;
             margin: 0px;
         }
 
         body {
-            background-image: url(/static/img/imagens/fundo02.jpeg);
+            background-image: url(/static/img/imagens/fundo030.jpeg);
+            bqckground-position: center;
             padding: 10px;
             display: flex;
             justify-content: center;
@@ -235,6 +251,8 @@ def ranke():
             position: absolute;
             margin-top: -90px;
             padding-bottom: 100px;
+            font-family: "oloko";
+            font-size: 60px;
 
         }
 
@@ -296,7 +314,7 @@ def ranke():
     '''
     for r in resultado:
         print(r[1])
-        pagina = pagina + f'SALA:__________ {r[10]} <br> PONTOS:__________{r[9]} <br> <br>'
+        pagina = pagina + f'SALA:__________ {r[1]} <br> PONTOS:__________{r[10]} <br> <br>'
     return pagina
 
 @app.route("/troca_de_senha", methods=['post'])
