@@ -25,7 +25,7 @@ ex:
 
   ALTERAÇÕES:
 - [ tela index:                                         ]
-  [ remover o ícone inferior esquerdo                   ]
+  [ remover o ícone inferior esquerdo ok                ]
 
 
 - [ tela de login:                                      ] 

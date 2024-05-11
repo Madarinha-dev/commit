@@ -420,7 +420,7 @@ def processamento():
     
     elif cod == "1ads":
         cod = 3      
-        sala = "1°A DS"  
+        # sala = "1°A DS"  
         comando = 'update pontuacao set cod=?, mp =?, ld =?, tn =?, qua =?, x1 =?, fn =?, ex =?, punicoes =?, total =? where cod =?'
         cursor.execute(comando,[cod, evento01, evento02, evento03, evento04, evento05, evento06, evento07, punicoes, total, cod])
         conexao.commit()
@@ -428,7 +428,7 @@ def processamento():
     
     elif cod == "1bds":
         cod = 4
-        sala = "1°B DS"
+        # sala = "1°B DS"
         comando = 'update pontuacao set cod=?, mp =?, ld =?, tn =?, qua =?, x1 =?, fn =?, ex =?, punicoes =?, total =? where cod =?'
         cursor.execute(comando,[cod, evento01, evento02, evento03, evento04, evento05, evento06, evento07, punicoes, total, cod])
         conexao.commit()
@@ -436,7 +436,7 @@ def processamento():
     
     elif cod == "2aadm":
         cod = 5
-        sala = "2°A ADM"
+        # sala = "2°A ADM"
         comando = 'update pontuacao set cod =?, mp =?, ld =?, tn =?, qua =?, x1 =?, fn =?, ex =?, punicoes =?, total =? where cod =?'
         cursor.execute(comando,[cod, evento01, evento02, evento03, evento04, evento05, evento06, evento07, punicoes, total, cod])
         conexao.commit()
@@ -444,15 +444,15 @@ def processamento():
     
     elif cod == "2badm":
         cod = 6
-        sala = "2°B ADM"
+        # sala = "2°B ADM"
         comando = 'update pontuacao set cod =?, mp =?, ld =?, tn =?, qua =?, x1 =?, fn =?, ex =?, punicoes =?, total =? where cod =?'
-        cursor.execute(comando,[sala, evento01, evento02, evento03, evento04, evento05, evento06, evento07, punicoes, total, cod])
+        cursor.execute(comando,[cod, evento01, evento02, evento03, evento04, evento05, evento06, evento07, punicoes, total, cod])
         conexao.commit()
         return render_template('administrador.html')
     
     elif cod == "2ads":
         cod = 7
-        sala = "2°A DS"
+        # sala = "2°A DS"
         comando = 'update pontuacao set cod =?, mp =?, ld =?, tn =?, qua =?, x1 =?, fn =?, ex =?, punicoes =?, total =? where cod =?'
         cursor.execute(comando,[cod, evento01, evento02, evento03, evento04, evento05, evento06, evento07, punicoes, total, cod])
         conexao.commit()
@@ -460,7 +460,7 @@ def processamento():
     
     elif cod == "2bds":
         cod = 8
-        sala = "2°B DS"
+        # sala = "2°B DS"
         comando = 'update pontuacao set cod =?, mp =?, ld =?, tn =?, qua =?, x1 =?, fn =?, ex =?, punicoes =?, total =? where cod =?'
         cursor.execute(comando,[cod, evento01, evento02, evento03, evento04, evento05, evento06, evento07, punicoes, total, cod])
         conexao.commit()
@@ -468,7 +468,7 @@ def processamento():
     
     elif cod == "3aadm":
         cod = 9
-        sala = "3°A ADM"
+        # sala = "3°A ADM"
         comando = 'update pontuacao set cod =?, mp =?, ld =?, tn =?, qua =?, x1 =?, fn =?, ex =?, punicoes =?, total =? where cod =?'
         cursor.execute(comando,[cod, evento01, evento02, evento03, evento04, evento05, evento06, evento07, punicoes, total, cod])
         conexao.commit()
@@ -476,7 +476,7 @@ def processamento():
     
     elif cod == "3badm":
         cod = 10
-        sala = "3°B ADM"
+        # sala = "3°B ADM"
         comando = 'update pontuacao set cod =?, mp =?, ld =?, tn =?, qua =?, x1 =?, fn =?, ex =?, punicoes =?, total =? where cod =?'
         cursor.execute(comando,[cod, evento01, evento02, evento03, evento04, evento05, evento06, evento07, punicoes, total, cod])
         conexao.commit()
@@ -484,7 +484,7 @@ def processamento():
     
     elif cod == "3ads":
         cod = 11
-        sala = "3°A DS"
+        # sala = "3°A DS"
         comando = 'update pontuacao set cod =?, mp =?, ld =?, tn =?, qua =?, x1 =?, fn =?, ex =?, punicoes =?, total =? where cod =?'
         cursor.execute(comando,[cod, evento01, evento02, evento03, evento04, evento05, evento06, evento07, punicoes, total, cod])
         conexao.commit()
@@ -492,7 +492,7 @@ def processamento():
     
     elif cod == "3bds":
         cod = 12
-        sala = "3°B DS"
+        # sala = "3°B DS"
         comando = 'update pontuacao set cod =?, mp =?, ld =?, tn =?, qua =?, x1 =?, fn =?, ex =?, punicoes =?, total =? where cod =?'
         cursor.execute(comando,[cod, evento01, evento02, evento03, evento04, evento05, evento06, evento07, punicoes, total, cod])
         conexao.commit()
