@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oloko</title>
     <style>
+        @font-face {
+            font-family: "oloko";
+            src: url(/static/Fonte/magic_school/MagicSchoolOne.ttf) format("truetype");
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: "oloko_dois";
+            src: url(/static/Fonte/magic_school/MagicSchoolTwo.ttf) format("truetype");
+            font-weight: 400;
+            font-style: normal;
+        }
+
         * {
             padding: 0px;
             margin: 0px;
@@ -30,7 +44,7 @@
             position: absolute;
             width: 250px;
             z-index: 1;
-            margin-top: 30dvh;
+            margin-top: 25dvh;
             transition: 0.5s;
         }
 
@@ -108,7 +122,7 @@
 
     <div style="display: flex; justify-content: center;">
         <!-- <img class="imagem-central" src="/static/img/imagens/foto_central.jpeg" style="border-radius:50%;" alt=""> -->
-        
+        <img class="imagem-central" src="/static/img/imagens/fundo037 - Copia.jpeg" style="width: 350px; height: 350px; border-radius: 50%;" alt="">        
         <span class="taca"><a href="/login" target="_blank">TAÇA DAS CASAS</a></span>
         
     </div>
@@ -119,8 +133,17 @@
 
     </div>
 
-    <div>
-        <span id="titulo">Taça das casas</span>
+    <div style="
+    display: flex;
+    justify-content: center;
+    margin-top: -520px;
+    background-color: rgba(255, 0, 0, 0);
+    ">
+        <span id="titulo" style="
+        font-family: 'oloko';
+        font-size: 60px;">- Taça das casas -</span>
+
+        <img src="" alt="">
     </div>
 </body>
 </html>
