@@ -24,6 +24,10 @@ ex:
 =============================================================================================
 
   ALTERAÇÕES:
+- [ tela index:                                         ]
+  [ remover o ícone inferior esquerdo                   ]
+
+
 - [ tela de login:                                      ] 
   [  mudar o texto para (desafios das casas) ok         ]
   [  colocar uma imagem na parte black transparente ok  ]

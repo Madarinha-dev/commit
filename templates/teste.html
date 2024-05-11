@@ -1,120 +1,126 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
+<html lang="pt-br">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rank</title>
+    <title>Oloko</title>
     <style>
-        @font-face {
-            font-family: "oloko";
-            src: url(/oloko/static/Fonte/magic_school/MagicSchoolOne.ttf) format("truetype");
-            font-weight: 400;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: "oloko_dois";
-            src: url(/oloko/static/Fonte/magic_school/MagicSchoolTwo.ttf) format("truetype");
-            font-weight: 400;
-            font-style: normal;
-        }
-
         * {
             padding: 0px;
             margin: 0px;
         }
-
         body {
-            background-image: url(/oloko/static/img/imagens/fundo01.jpeg);
-            /* background-image: ; */
-           
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            color: white;
-            margin-top: 100px;
-
-        }
-        p {
-            color: #6F44BE;
-            font-family: "oloko";
-            font-size: px;
+            /* background-color: #2A105A; */
+            background-image: url(/static/img/imagens/fundo037.jpeg);
+            background-size: cover;
+            /* background-position: center center; */
         }
 
-        h1 {
-            color: #6F44BE;
-            
-            /* font-family: Georgia, 'Times New Roman', Times, serif; */
-            font-family: "oloko_dois";
-            font-size: 100px;
-            text-align: center;
-            /* background-color: aqua; */
+        .diagonal {  
+            width: 198%;
+            height: 40%;
+            /* background-color: #6F44BE; */
             position: absolute;
-            margin-top: -90px;
-            padding-bottom: 100px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-50deg);
+        }
+        
+        img.imagem-central {
+            position: absolute;
+            width: 250px;
+            z-index: 1;
+            margin-top: 30dvh;
+            transition: 0.5s;
+        }
+
+        img.imagem-central:hover {
+            width: 300px;
+            transition: 0.8s;
+            border: 3px solid rgb(0, 225, 255);
+            box-shadow: 0px 5px 15px;
+        }
+
+        img.ete-gamificada {
+            position: absolute;
+            width: 120px;
+            z-index: 1;
+            border-radius: 50%;
+            margin-top: 5%;
+            margin-left: 5%;
+        }
+
+        img.controle {
+            position: absolute;
+            width: 80px;
+            z-index: 1;
+            margin-left: 1dvw;
+        }
+        span.taca {
+        align-items: center;
+        z-index: 1;
+        /* margin-top: 70dvh; */
+        margin-top: 80dvh;
+        }
+
+        span.taca > a {
+            border-radius: 20px;
+            background-color: #2a105ac9;
+            color:white;
+            padding-left: 20dvw;
+            padding-right: 20dvw;
+            padding-top: 13px;
+            padding-bottom: 13px;
+            transition: 0.6s;
+            text-decoration: none;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
         }
 
-        div.casa {
-            background-color: rgba(255, 0, 0, 0.317);
-            margin-top:60px;
-            width: 80dvw;
-            max-width: 400px;
-            height: 200px;
-            /* altura a definir dependendo da situação */
-
-            display: flex;
-            justify-content: center;
+        span.taca > a:hover {
+            transition: 1s;
+            color: #2A105A;
+            background-color: white;
+            padding-left: 30dvw;
+            padding-right: 30dvw;
+            padding-top: 10px;
+            height: 40px;
+            box-shadow: 0px 5px 15px;
         }
-
-        div.tabela {
-            background-color: aqua;
+        span#titulo {
+            align-items: center;
         }
-
-        .botao {
-        transition: 0.6s;
-        }
-
-        .botao:hover {
-        background-color: rgb(255, 86, 86);
-        color: white;
-        transition: 0.6s;
-        /* padding: 2px; */
-        padding-top:5px ;
-        padding-bottom: 5px;
-        margin: 5px;
-        }
-
-
     </style>
-    </head>
-    <body>
-    <!-- <h1>Fhellype </h1> -->
+</head>
+<body>
+    <!-- <audio autoplay loop src="/static/som/trilha_sonora.mpeg"></audio> -->
 
-    <a href="adm" class=""><button style="
-        width: 70px;
-        max-width: 350px;
-        border-radius: 10px;
-        height: 25px;
-        position: absolute;
-        top: 20px;
-        left: 10px;" type="" class="botao">Voltar</button></a>
+    <!-- <div style="position: absolute;
+    display: flex;
+    margin-top: 80dvh;
+    margin-left: 65%;">
+        <img class="controle" src="/static/img/imagens/controle.png" alt="">
+    </div> -->
 
-        <p>A</p>
-        <p>B</p>
-        <p>C</p>
-        <p>D</p>
-        <p>E</p>
+    <!-- <div style="position: absolute;">
+        <img class="ete-gamificada" src="/static/img/imagens/ETE_GAMIFICADA.jpeg" alt="">
+    </div> -->
 
-       
+    <div style="display: flex; justify-content: center;">
+        <!-- <img class="imagem-central" src="/static/img/imagens/foto_central.jpeg" style="border-radius:50%;" alt=""> -->
+        
+        <span class="taca"><a href="/login" target="_blank">TAÇA DAS CASAS</a></span>
+        
+    </div>
 
+    <div>
 
-    <!-- <div class="casa"> -->
-        <!-- <div class="tabela"> -->
-            <!-- a tabela [ rank ]  exibir em ordem crescente, pode ser a tabela completa-->
-        <!-- </div> -->
-    <!-- </div> -->
+        <div class="diagonal"></div>
 
+    </div>
 
-    </body>
-    </html>
+    <div>
+        <span id="titulo">Taça das casas</span>
+    </div>
+</body>
+</html>
