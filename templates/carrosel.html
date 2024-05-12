@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrosel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            position: relative;
+            padding: 15px;
+            max-width: 640px;
+            margin: 0 auto;
+            /* display: none; */
+            /* margin-top: 50px; */
+
+        }
+
+        .gallery-wrapper {
+            overflow-x: auto;
+            /* background-color: red; */
+            margin-left: 30px;
+            margin-right: 30px;
+            /* -ms-overflow-style: none; */
+            scrollbar-width: none;
+        }
+
+        .gallery {
+            display: flex;
+            flex-flow: row nowrap;
+            gap: 5px;
+            /* background-color: blueviolet; */
+        }
+
+        .arrow-left,
+        .arrow-right {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: auto;
+            font-size: 10px;
+            width: 40px;
+            text-align: center;
+            color: red;
+            cursor: pointer;
+            border: none;
+            background: linear-gradient(to left, transparent 0%, black 200%);
+            opacity: 0.1;
+            transition: 1s;
+        }
+
+        .arrow-right {
+            left: auto;
+            right: 0;
+            color: red;
+            background-color: aqua;
+            background: linear-gradient(to right, transparent 0%, black 200%);
+        }
+
+        .arrow-right:hover {
+            opacity: 1;
+        }
+
+        .arrow-left {
+            
+            background-color: aqua;
+
+        }
+
+        .arrow-left:hover {
+            opacity: 1;
+            transition: 1s;
+        }
+
+        .item {
+            width: 100px;
+            height: 100px;
+            flex-shrink: 0;
+            opacity: 0.6;
+            transition: 1s;
+        }
+
+        .current-item {
+            opacity: 1;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Aprendendo a fazer um Carrosel</h1>
+    <hr>
+
+    <div class="container">
+
+        <!-- <button class="arrow-left control" aria-label="Previous image">
+            Voltar
+        </button>
+
+        <button class="arrow-right control" aria-label="Previous image">
+            Avançar
+        </button> -->
+
+        <div class="gallery-wrapper">
+
+            <div class="gallery">
+                <img style="width: 100px; height: 100px; border-radius: 10px;" src="/static/img/imagens/Juliana.jpeg" alt="" class="item current-item">
+                <img style="width: 100px; height: 100px; border-radius: 10px;" src="/static/img/imagens/Fhellype.jpeg" alt="" class="item">
+                <img style="width: 100px; height: 100px; border-radius: 10px;" src="/static/img/imagens/Dani.jpeg" alt="" class="item">
+                <img style="width: 100px; height: 100px; border-radius: 10px;" src="/static/img/imagens/Ketlly.jpeg" alt="" class="item">
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+</html>

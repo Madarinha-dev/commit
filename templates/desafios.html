@@ -20,16 +20,115 @@
         }
 
 
+        .container {
+            position: relative;
+            padding: 15px;
+            background-color: #2A105A;
+            border-radius: 30px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            /* max-width: 640px; */
+            /* margin: 0 auto; */
+            margin-left: 10px;
+            margin-right: 10px;
+            /* display: none; */
+
+        }
+        .container:hover {
+            transition: 1s;
+            border: 2px solid rgb(0, 225, 255);
+            box-shadow: 0px 5px 15px;
+        }
+
+        .gallery-wrapper {
+            overflow-x: auto;
+            /* background-color: red; */
+            margin-left: 10px;
+            margin-right: 10px;
+            /* -ms-overflow-style: none; */
+            scrollbar-width: none;
+        }
+
+        .gallery {
+            display: flex;
+            flex-flow: row nowrap;
+            gap: 20px;
+            /* background-color: blueviolet; */
+        }
+
+        .arrow-left,
+        .arrow-right {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: auto;
+            font-size: 10px;
+            width: 40px;
+            text-align: center;
+            color: red;
+            cursor: pointer;
+            border: none;
+            background: linear-gradient(to left, transparent 0%, black 200%);
+            opacity: 0.1;
+            transition: 1s;
+        }
+
+        .arrow-right {
+            left: auto;
+            right: 0;
+            color: red;
+            background-color: aqua;
+            background: linear-gradient(to right, transparent 0%, black 200%);
+        }
+
+        .arrow-right:hover {
+            opacity: 1;
+        }
+
+        .arrow-left {
+            
+            background-color: aqua;
+
+        }
+
+        .arrow-left:hover {
+            opacity: 1;
+            transition: 1s;
+        }
+
+        .item {
+            width: 200px;
+            height: 200px;
+            flex-shrink: 0;
+            /* opacity: 0.6; */
+            transition: 1s;
+        }
+
+        .beneficio:hover {
+            /* width: 148; */
+            /* height: 148; */
+            margin: 1px;
+            transition: 0.5s;
+            border: 3px solid rgb(0, 225, 255);
+            box-shadow: 0px 5px 15px;
+            
+        }
+        .beneficio {
+            transition: 1s;
+        }
+
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
         body {
             background-color: #6F44BE;
         }
 
         div.casa > a > img.trofeu {
-            width: 130px;
+            /* width: 130px; */
             height: 130px;
             border-radius: 50%;
             padding-left: 12%;
@@ -180,7 +279,54 @@
         <a href="/x1"><img src="/static/img/imagens/x1.png" alt=""></a>
         <a href="/ordem"><img src="/static/img/imagens/ordem-da-fenix.png" alt=""></a>
     </div>
-    <!-- mapa-maroto  livro  torneio  quadribol  x1   ordem -->
+    
+
+    <p style="
+    margin-left: 25px;
+    margin-top: 70px;
+    font-family: 'oloko';
+    font-size: 50px;
+    color: #2A105A;
+    ">Beco Diagonal</p>
+
+
+    <div class="container">
+
+        <div class="gallery-wrapper">
+
+            <div class="gallery">
+
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScu3clSSgIXNcJTL3bOadZ1_dIkRLmieVkFAnZNkz9aZgmDJA/viewform" class="beneficio" style="background-color: white; border-radius: 30px ;" target="_blank">
+                    <img style="width: 150px; height: 150px; border-radius: 50%" src="/static/img/imagens/casa-de-magia.png" alt="" class="item">
+                </a>
+
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdk8MayW-ze5CT6lTAJM8FxALrlw_n9iPbh0QgTFKaZlyXGEw/viewform" class="beneficio" style="background-color: #345457; border-radius: 30px ;" target="_blank">
+                    <img style="width: 150px; height: 150px; border-radius: 50%" src="/static/img/imagens/magic-book.png" alt="" class="item">
+                </a>
+
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdn-2FT93Mx2kBV0Ro0W9_E5owCkyl_OyekA82-fXCasAmQuA/viewform" class="beneficio" style="background-color: #00BD82; border-radius: 30px ;" target="_blank">
+                    <img style="width: 150px; height: 150px; border-radius: 50%" src="/static/img/imagens/olivaras.png" alt="" class="item">
+                </a>
+
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScUxsznYlpqZTBofv6LwA9v_eMSeNR-TIGrkDKou4yqwAY6xQ/viewform" class="beneficio" style="background-color: #080822; border-radius: 30px ;" target="_blank">
+                    <img style="width: 150px; height: 150px; border-radius: 50%" src="/static/img/imagens/misterios.png" alt="" class="item">
+                </a>
+
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdjuqJoUyRgj_aY_jd1WjewTgBusIkEXS3ASRFNWqWnzhPyXg/viewform" class="beneficio" style="background-color: white; border-radius: 30px ;" target="_blank">
+                    <img style="width: 150px; height: 150px; border-radius: 50%" src="/static/img/imagens/master.png" alt="" class="item">
+                </a>
+
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScm6dyyQKy14J14TKZlC_nMeN5grSLEheCZNX796_GL3fdtAQ/viewform" class="beneficio" style="background-color: black; border-radius: 30px ;" target="_blank">
+                    <img style="width: 150px; height: 150px; border-radius: 50%" src="/static/img/imagens/maroto.png" alt="" class="item">
+                </a>
+                
+        
+                
+                
+            </div>
+
+        </div>
+    </div>
 
 
     <footer style="

@@ -24,6 +24,8 @@ ex:
 =============================================================================================
 
   ALTERAÇÕES:
+
+- [ adicionar o beco diagonal ok                        ]
 - [ tela index:                                         ]
   [ remover o ícone inferior esquerdo ok                ]
 
