@@ -334,7 +334,7 @@ def trocar():
         conexao.commit()
         
         return render_template('administrador.html')
-        
+    
 
 
 
@@ -344,44 +344,59 @@ def direcao():
     cursor = conexao.cursor()
     direcao = request.form['sala']
     senha = request.form['senha']
-    print(direcao)
-    comando = '''
-select * from  senhaa where sala=? and senha=?
+    comando='''
+SELECT * FROM senhaa WHERE sala=?
 '''
-    cursor.execute(comando,[direcao,senha])
-    lista = cursor.fetchall()
+    cursor.execute(comando, [direcao])
     conexao.commit()
+    lista=cursor.fetchall()
     print(lista)
-    lista = str(lista)
-    lista=lista.replace("[","").replace("]","").replace("(","").replace(")","")
-    lista = list(lista)
-    print(lista)
+
+
 
     if direcao=="administrador":
-        cursor.execute(comando,[direcao,senha])
-        lista = cursor.fetchall()
-
-
+        comando='''
+SELECT * FROM senhaa WHERE sala= administrador and sala=?
+'''
+        cursor.execute(comando, [senha])
+        conexao.commit()
+        lista=cursor.fetchall()
+        print(lista)
         if len(lista)>0:
-            session["adm"]=direcao
             return render_template("administrador.html")
-        else:
-            return redirect("/login")
+    
+
+
+
+    # return print("direção: ", direcao), print("senha: ", senha) ,print("Lista: ", lista)
+    
+
+
+    # if direcao=="administrador":
+    #     cursor.execute(comando,[direcao,senha])
+    #     lista = cursor.fetchall()
+
+
+    #     if len(lista)>0:
+    #         session["adm"]=direcao
+    #         return render_template("administrador.html")
+    #     else:
+    #         return redirect("/login")
         
 
-    elif direcao != "admnistrador":
-        cursor.execute(comando,[direcao,senha])
-        lista = cursor.fetchall()
+    # elif direcao != "administrador":
+    #     cursor.execute(comando,[direcao,senha])
+    #     lista = cursor.fetchall()
 
 
-        if len(lista)>0:
-            session["aluno"]=direcao 
-            # if "aluno" in session
-            return render_template("desafios.html")
-        else:
-            return redirect("/login")
-    else:
-        return redirect('/login') 
+    #     if len(lista)>0:
+    #         session["aluno"]=direcao 
+    #         # if "aluno" in session
+    #         return render_template("desafios.html")
+    #     else:
+    #         return redirect("/login")
+    # else:
+    #     return redirect('/login') 
     
     
 @app.route('/processamento', methods=['post'])

@@ -25,16 +25,19 @@ ex:
 
   ALTERAÇÕES:
 
-- [ adicionar o beco diagonal ok                        ]
-- [ tela index:                                         ]
-  [ remover o ícone inferior esquerdo ok                ]
+- [ se o professor quiser quantos pontos a sala X tem nos ]
+  [ eventos.                                              ]
+
+- [ adicionar o beco diagonal ok                          ]
+- [ tela index:                                           ]
+  [ remover o ícone inferior esquerdo ok                  ]
 
 
-- [ tela de login:                                      ] 
-  [  mudar o texto para (desafios das casas) ok         ]
-  [  colocar uma imagem na parte black transparente ok  ]
-  [ baixar uma fonte para colocar no site ok            ]
-  [ colocar notificação de quando a senha estiver errada]
+- [ tela de login:                                        ] 
+  [  mudar o texto para (desafios das casas) ok           ]
+  [  colocar uma imagem na parte black transparente ok    ]
+  [ baixar uma fonte para colocar no site ok              ]
+  [ colocar notificação de quando a senha estiver errada  ]
 
 - [ tela dos desafios:                          ]
   [ "baixar PDF" deixar intuitivo ok            ]
